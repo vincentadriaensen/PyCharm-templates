@@ -1,0 +1,94 @@
+<templateSet group="Odoo_xml">
+  <template name="o_assets_backend" value="&lt;!-- For use in backend --&gt;&#10;&lt;template id=&quot;assets_backend&quot; name=&quot;$module_name$ assets&quot; inherit_id=&quot;web.assets_backend&quot;&gt;&#10;    &lt;xpath expr=&quot;.&quot; position=&quot;inside&quot;&gt;&#10;        &lt;link href=&quot;/$module_name$/static/src/css/$css_name$&quot; rel=&quot;stylesheet&quot;/&gt;&#10;        &lt;script src=&quot;/$module_name$/static/src/js/$js_name$&quot; type=&quot;text/javascript&quot;/&gt;&#10;    &lt;/xpath&gt;&#10;&lt;/template&gt;" description="Template: assets_backend" toReformat="false" toShortenFQNames="true">
+    <variable name="module_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="css_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="js_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="odoo_resources" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#10;&lt;odoo&gt;&#10;    &lt;data&gt;&#10;        &lt;!-- For use in backend --&gt;&#10;        &lt;template id=&quot;assets_backend&quot; name=&quot;$module_name assets&quot; inherit_id=&quot;web.assets_backend&quot;&gt;&#10;            &lt;xpath expr=&quot;.&quot; position=&quot;inside&quot;&gt;&#10;                &lt;link href=&quot;/$module_name/static/src/css/$css_name&quot; rel=&quot;stylesheet&quot;/&gt;&#10;                &lt;script src=&quot;/$module_name/static/src/js/$js_name&quot; type=&quot;text/javascript&quot;/&gt;&#10;            &lt;/xpath&gt;&#10;        &lt;/template&gt;&#10;&#10;        &lt;!-- For use in report --&gt;&#10;        &lt;template id=&quot;assets_common&quot; name=&quot;$module_name pdf assets&quot; inherit_id=&quot;report.assets_common&quot;&gt;&#10;            &lt;xpath expr=&quot;.&quot; position=&quot;inside&quot;&gt;&#10;                &lt;link href=&quot;/$module_name/static/src/css/$css_name&quot; rel=&quot;stylesheet&quot;/&gt;&#10;            &lt;/xpath&gt;&#10;        &lt;/template&gt;&#10;&#10;        &lt;!-- For use in POS --&gt;&#10;        &lt;template id=&quot;assets&quot; name=&quot;$module_name assets&quot; inherit_id=&quot;point_of_sale.assets&quot;&gt;&#10;            &lt;xpath expr=&quot;.&quot; position=&quot;inside&quot;&gt;&#10;                &lt;link href=&quot;/$module_name/static/src/css/$css_name&quot; rel=&quot;stylesheet&quot; /&gt;&#10;                &lt;script src=&quot;/$module_name/static/src/js/$js_name&quot; type=&quot;text/javascript&quot;/&gt;&#10;            &lt;/xpath&gt;&#10;        &lt;/template&gt;&#10;&#10;        &lt;!-- For use in website --&gt;&#10;        &lt;template id=&quot;assets_frontend&quot; name=&quot;$module_name assets frontend&quot; inherit_id=&quot;website.assets_frontend&quot;&gt;&#10;            &lt;xpath expr=&quot;.&quot; position=&quot;inside&quot;&gt;&#10;                &lt;link href='/$module_name/static/src/css/$css_name' rel='stylesheet'/&gt;&#10;                &lt;script src=&quot;/$module_name/static/src/js/$js_name&quot; type=&quot;text/javascript&quot;/&gt;&#10;            &lt;/xpath&gt;&#10;        &lt;/template&gt;&#10;    &lt;/data&gt;&#10;&lt;/odoo&gt;" description="Full resource layout" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="o_assets_common" value="&lt;!-- For use in report --&gt;&#10;&lt;template id=&quot;assets_common&quot; name=&quot;$module_name$ pdf assets&quot; inherit_id=&quot;report.assets_common&quot;&gt;&#10;&#9;&lt;xpath expr=&quot;.&quot; position=&quot;inside&quot;&gt;&#10;&#9;&#9;&lt;link href=&quot;/$module_name$/static/src/css/$css_name$&quot; rel=&quot;stylesheet&quot;/&gt;&#10;&#9;&lt;/xpath&gt;&#10;&lt;/template&gt;" description="Template: assets_common" toReformat="false" toShortenFQNames="true">
+    <variable name="module_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="css_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="o_assets_pos" value="&lt;!-- For use in POS --&gt;&#10;&lt;template id=&quot;assets&quot; name=&quot;$module_name$ assets&quot; inherit_id=&quot;point_of_sale.assets&quot;&gt;&#10;&#9;&lt;xpath expr=&quot;.&quot; position=&quot;inside&quot;&gt;&#10;&#9;&#9;&lt;link href=&quot;/$module_name$/static/src/css/$css_name$&quot; rel=&quot;stylesheet&quot;/&gt;&#10;&#9;&#9;&lt;script src=&quot;/$module_name$/static/src/js/$js_name$&quot; type=&quot;text/javascript&quot;/&gt;&#10;&#9;&lt;/xpath&gt;&#10;&lt;/template&gt;" description="Template: assets_pos" toReformat="false" toShortenFQNames="true">
+    <variable name="module_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="css_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="js_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="o_assets_frontend" value="&lt;!-- For use in website --&gt;&#10;&lt;template id=&quot;assets_frontend&quot; name=&quot;$module_name$ assets frontend&quot; inherit_id=&quot;website.assets_frontend&quot;&gt;&#10;&#9;&lt;xpath expr=&quot;.&quot; position=&quot;inside&quot;&gt;&#10;&#9;&#9;&lt;link href='/$module_name$/static/src/css/$css_name$' rel='stylesheet'/&gt;&#10;&#9;&#9;&lt;script src=&quot;/$module_name$/static/src/js/$js_name$&quot; type=&quot;text/javascript&quot;/&gt;&#10;&#9;&lt;/xpath&gt;&#10;&lt;/template&gt;" description="Template: assets_frontend" toReformat="false" toShortenFQNames="true">
+    <variable name="module_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="css_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="js_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="o_data_main" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#10;&lt;odoo&gt;&#10;    &lt;data&gt;&#10;        $END$&#10;    &lt;/data&gt;&#10;&lt;/odoo&gt;" description="Template: empty data" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="o_view_xpath" value="&lt;record id=&quot;$record_id$&quot; model=&quot;ir.ui.view&quot;&gt;&#10;    &lt;field name=&quot;name&quot;&gt;$template_name$&lt;/field&gt;&#10;    &lt;field name=&quot;model&quot;&gt;$model$&lt;/field&gt;&#10;    &lt;field name=&quot;inherit_id&quot; ref=&quot;$inherit_id$&quot;/&gt;&#10;    &lt;field name=&quot;arch&quot; type=&quot;xml&quot;&gt;&#10;         &lt;xpath expr=&quot;$expr$&quot; position=&quot;$position$&quot;&gt;&#10;            $END$&#10;        &lt;/xpath&gt;&#10;    &lt;/field&gt;&#10;&lt;/record&gt;" description="Template: Full xpath" toReformat="false" toShortenFQNames="true">
+    <variable name="record_id" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="template_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="model" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="inherit_id" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="expr" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="position" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="o_view_form" value="&lt;record id=&quot;$record_id$_form&quot; model=&quot;ir.ui.view&quot;&gt;&#10;    &lt;field name=&quot;name&quot;&gt;$record_name$&lt;/field&gt;&#10;    &lt;field name=&quot;model&quot;&gt;$model$&lt;/field&gt;&#10;    &lt;field name=&quot;arch&quot; type=&quot;xml&quot;&gt;&#10;        &lt;form string=&quot;$form_string$&quot;&gt;&#10;            &lt;sheet&gt;&#10;                $END$&#10;            &lt;/sheet&gt;&#10;        &lt;/form&gt;&#10;    &lt;/field&gt;&#10;&lt;/record&gt;" description="Template: Full formview" toReformat="false" toShortenFQNames="true">
+    <variable name="record_id" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="record_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="model" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="form_string" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="o_view_tree" value="&lt;record id=&quot;$record_id$_tree&quot; model=&quot;ir.ui.view&quot;&gt;&#10;    &lt;field name=&quot;name&quot;&gt;$record_name$&lt;/field&gt;&#10;    &lt;field name=&quot;model&quot;&gt;$model$&lt;/field&gt;&#10;    &lt;field name=&quot;arch&quot; type=&quot;xml&quot;&gt;&#10;        &lt;tree string=&quot;$tree_string$&quot;&gt;&#10;            $END$&#10;        &lt;/tree&gt;&#10;    &lt;/field&gt;&#10;&lt;/record&gt;" description="Template: Full treeview" toReformat="false" toShortenFQNames="true">
+    <variable name="record_id" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="record_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="model" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="tree_string" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="o_menuitem_top" value="&lt;!-- Top menu item --&gt;&#10;&lt;menuitem &#10;    id=&quot;$id$&quot;&#10;    name=&quot;$name$&quot;&#10;    groups=&quot;$groups$&quot;&#10;    icon=&quot;$icon$&quot;&#10;    web_icon=&quot;$web_icon$&quot;&#10;    sequence=&quot;$sequence$&quot;/&gt;" description="Template: top menuitem" toReformat="false" toShortenFQNames="true">
+    <variable name="id" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="groups" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="icon" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="web_icon" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="sequence" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+  <template name="o_menuitem" value="&lt;!-- menu item --&gt;&#10;&lt;menuitem &#10;    id=&quot;$id$&quot;&#10;    name=&quot;$name$&quot;&#10;    parent=&quot;$parent$&quot;&#10;    action=&quot;$action$&quot;&#10;    groups=&quot;$groups$&quot;&#10;    sequence=&quot;$sequence$&quot;/&gt;" description="Template: menuitem" toReformat="false" toShortenFQNames="true">
+    <variable name="id" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="parent" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="action" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="groups" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="sequence" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XML" value="true" />
+    </context>
+  </template>
+</templateSet>

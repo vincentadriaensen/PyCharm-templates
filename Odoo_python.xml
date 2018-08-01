@@ -1,0 +1,87 @@
+<templateSet group="Odoo_python">
+  <template name="o_model" value="# -*- coding: utf-8 -*-&#10;&#10;from odoo import api, fields, models, _&#10;&#10;&#10;class $class_name$(models.Model):&#10;    _name = '$_name$'&#10;    _inherit = '$_inherit$'" description="new Model" toReformat="false" toShortenFQNames="true">
+    <variable name="class_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="_inherit" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="o_write" value="@api.multi&#10;def write(self, vals):&#10;    return_value = super($class_name$, self).write(vals)&#10;&#10;    return return_value" description="method: Write" toReformat="false" toShortenFQNames="true">
+    <variable name="class_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="o_create" value="@api.model&#10;def create(self, vals):&#10;    return_value = super($class_name$, self).create(vals)&#10;&#10;    return return_value" description="method: Create" toReformat="false" toShortenFQNames="true">
+    <variable name="class_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="o_unlink" value="@api.multi&#10;def unlink(self, vals):&#10;    return_value = super($class_name$, self).unlink(vals)&#10;&#10;    return return_value" description="method: Unlink" toReformat="false" toShortenFQNames="true">
+    <variable name="class_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="o_method" value="@api.multi&#10;def $method_name$(self, vals):&#10;    return_value = super($class_name$, self).$method_name$(vals)&#10;&#10;    return return_value" description="Empty method" toReformat="false" toShortenFQNames="true">
+    <variable name="method_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="class_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="o_onchange" value="@api.onchange('$field_name$')&#10;def $method_name$(self):&#10;    pass" description="method: onchange" toReformat="false" toShortenFQNames="true">
+    <variable name="field_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="method_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="o_compute" value="@api.depends('$depends_on_this$')&#10;def _compute_$field_name$(self):&#10;    for record in self:&#10;        record.$field_name$ = record.$depends_on_this$&#10;" description="method: compute" toReformat="false" toShortenFQNames="true">
+    <variable name="depends_on_this" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="field_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="o_o2m" value="$field_name$ = fields.One2many(string='$string$', comodel_name='$comodel_name$', inverse_name='$inverse_name$', domain='$domain$', context='$context$')" description="Field: One2many" toReformat="false" toShortenFQNames="true">
+    <variable name="field_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="string" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="comodel_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="inverse_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="domain" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="context" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="o_m2o" value="$field_name$ = fields.Many2one(string='$string$', comodel_name='$comodel_name$', domain='$domain$', context='$context$')" description="Field: Many2one" toReformat="false" toShortenFQNames="true">
+    <variable name="field_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="string" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="comodel_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="domain" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="context" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="o_m2m" value="$field_name$ = fields.Many2many(string='$string$', relation='$relation$', column1='$column1$', column2='$column2$')" description="Field: Many2many" toReformat="false" toShortenFQNames="true">
+    <variable name="field_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="string" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="relation" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="column1" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="column2" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+  <template name="o_char" value="$field_name$ = fields.Char(string='$string$')" description="new fields.Char declaration" toReformat="false" toShortenFQNames="true">
+    <variable name="field_name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="string" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="Python" value="true" />
+    </context>
+  </template>
+</templateSet>
